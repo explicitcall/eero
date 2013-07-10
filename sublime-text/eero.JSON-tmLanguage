@@ -1,0 +1,39 @@
+{ "name": "Syntax Name",
+  "scopeName": "source.syntax_name",
+  "fileTypes": ["eero"],
+  "patterns": [
+    { 
+      "match": "(#.*)$",
+      "name": "keyword.control.import.source.eero",
+      "comment": "types"
+    },
+    { 
+      "match": "(//.*)$",
+      "name": "comment.c-style.source.eero",
+      "comment": "types"
+    },
+    { 
+      "match": "\\b(break|case|continue|default|do|else|for|goto|if|return|sizeof|switch|typedef|while|_Static_assert|__func__|__objc_yes|__objc_no|private|protected|public|throw|try|using|compatibility_alias|defs|encode|end|interface|protocol|class|selector|finally|synchronized|autoreleasepool|property|package|required|optional|synthesize|dynamic|import|self|nil|Nil|in|readwrite|readonly|strong|weak|copy|assign|retain|atomic|nonatomic|and|or|not|not_eq|bitand|bitor|compl|xor|and_eq|or_eq|xor_eq|YES|NO)\\b",
+      "name": "keyword.source.eero",
+      "comment": "keywords"
+    },
+    { 
+      "match": "\\b(auto|char|const|double|enum|extern|float|inline|int|long|register|restrict|short|signed|static|struct|union|unsigned|void|volatile|_Alignas|_Alignof|_Atomic|_Bool|_Complex|_Generic|_Imaginary|id|instancetype|Protocol|SEL|BOOL)\\b",
+      "name": "entity.name.type.source.eero",
+      "comment": "types"
+    },
+    { 
+      "match": "(implementation)\\s+([A-zA-z]+)",
+      "name": "implementation.source.eero",
+      "captures": {
+          "1": { "name": "keyword.source.eero" },
+          "2": { "name": "entity.other.inherited-class" }
+       },
+      "comment": "types"
+    },
+    {
+      "include": "source.python"
+    }
+  ],
+  "uuid": "3e2e2603-9a64-4bae-8de1-b0985a546432"
+}
